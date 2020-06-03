@@ -1,0 +1,205 @@
+// Product Page 5
+.sidebar-product {
+  .widget.widget-collapse {
+    margin-bottom: 3rem;
+    padding: 1.8rem 1.5rem 1.3rem;
+    border: 1px solid #dae2e6;
+
+    .widget-title {
+      margin: 0;
+
+      a {
+        display: block;
+        position: relative;
+        padding: .2rem 0 .6rem;
+        color: inherit;
+
+        &:hover,
+        &:focus {
+          color: $headings-text;
+          text-decoration: none;
+        }
+
+        &::after {
+          display: inline-block;
+          position: absolute;
+          top: 42%;
+          right: .1rem;
+          transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          transition: all .35s;
+          font-family: 'porto';
+          font-size: 1.7rem;
+          font-weight: 400;
+          content: '\e81b';
+        }
+
+        &.collapsed::after {
+          content: '\e81c';
+        }
+      }
+    }
+
+    .widget-body {
+      @include clearfix;
+      padding-top: 1.3rem;
+      padding-bottom: .5rem;
+    }
+  }
+}
+
+.product-single-collapse {
+  margin-bottom: 2rem;
+
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  .product-desc-content ul, .product-desc-content ol {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.product-collapse-panel {
+  padding-bottom: 1.8rem;
+}
+
+.product-collapse-title {
+  margin: 0;
+  padding-bottom: 1.2rem;
+  color: $headings-text;
+  font: 700 1.4rem/1.1 $font-family;
+  letter-spacing: .005em;
+  text-transform: uppercase;
+
+  a {
+    display: block;
+    position: relative;
+    padding: 0 0 1.2rem 4rem;
+    border-bottom: .2rem solid #dae2e6;
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &::before {
+      display: block;
+      position: absolute;
+      bottom: -.2rem;
+      left: 0;
+      width: 100%;
+      height: .2rem;
+      -webkit-transform-origin: left center;
+      transform-origin: left center;
+      -webkit-transform: scale(1, 1);
+      transform: scale(1, 1);
+      transition: transform .4s;
+      background-color: $primary-color;
+      content: '';
+    }
+
+    &::after {
+      display: inline-block;
+      position: absolute;
+      top: .7rem;
+      left: 1.5rem;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      transition: all .35s;
+      font-family: 'porto';
+      font-size: 2rem;
+      font-weight: 400;
+      content: '\e81b';
+    }
+
+    &.collapsed {
+      &::after {
+        content: '\e81c';
+      }
+
+      &::before {
+        -webkit-transform-origin: right center;
+        transform-origin: right center;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+      }
+    }
+  }
+}
+
+.collapse-body-wrapper {
+  padding-top: 3.4rem;
+  padding-bottom: 2rem;
+}
+
+.sidebar-toggle {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  transition: all .2s ease-in-out 0s;
+  border: #dcdcda solid 1px;
+  border-left-width: 0;
+  background: #fff;
+  font-size: 17px;
+  line-height: 38px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 999;
+}
+
+@include mq('lg') {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+@include mq('sm') {
+  .sidebar-product {
+    .widget.widget-collapse {
+      padding: 3.3rem 3rem 2.8rem;
+    }
+  }
+}
+
+@include mq('lg', 'max') {
+  .mobile-sidebar {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 260px;
+    padding: 0;
+    -webkit-transform: translate(-260px);
+    transform: translate(-260px);
+    transition: transform .2s ease-in-out 0s;
+    background-color: #fff;
+    z-index: 9999;
+    overflow-y: auto;
+  }
+
+  .sidebar-opened .mobile-sidebar {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+    transition: transform .3s ease-in-out 0s;
+  }
+
+  .sidebar-opened .sidebar-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .35;
+    z-index: 8999;
+  }
+
+  .sidebar-product {
+    margin: 0;
+    padding: 2.5rem;
+  }
+}

@@ -1,0 +1,125 @@
+// Feature Box
+.feature-box {
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+  color: #7b858a;
+  font-size: 1.5rem;
+  line-height: 2;
+
+  i {
+    display: inline-block;
+    margin-bottom: 2.2rem;
+    color: $primary-color;
+    font-size: 5rem;
+    line-height: 1;
+
+    &::before {
+      margin: 0;
+    }
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    color: #21293c;
+    font: 600 1.8rem/1.1 $font-family;
+    letter-spacing: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.feature-box-content {
+  color: #7b858a;
+  font-size: 1.5rem;
+  line-height: 1.8;
+}
+
+.feature-box-simple {
+  margin-bottom: 2.5rem;
+  padding: 0;
+  background-color: transparent;
+  color: #687176;
+  font-size: 1.3rem;
+  line-height: 1.9;
+
+  .feature-box-content {
+    color: inherit;
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  i {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+    color: $primary-color;
+    font-size: 4rem;
+
+    &.icon-paper-plane::before {
+      margin-left: -.5rem;
+    }
+  }
+
+  h3 {
+    margin-bottom: 2.6rem;
+    color: $headings-text;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    span {
+      display: block;
+      margin-top: .5rem;
+      color: #465157;
+      font-size: 1.4rem;
+      font-weight: 400;
+      text-transform: capitalize;
+    }
+  }
+
+  p {
+    max-width: 340px;
+    min-height: 0 !important;
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &.text-center p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .btn {
+    min-width: 125px;
+    padding: 1rem;
+    font-size: 1.3rem;
+  }
+}
+
+@include mq('md') {
+  .feature-box {
+    padding: 4.1rem 4.5rem 4rem;
+
+    &.feature-box-simple  {
+      padding: 0;
+    }
+  }
+}
+
+@include mq('lg') {
+  .feature-box {
+    p {
+      min-height: 120px;
+    }
+  }
+}

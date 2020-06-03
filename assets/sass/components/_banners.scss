@@ -1,0 +1,153 @@
+// Banners
+.banners-group {
+  margin-bottom: 1.5rem
+}
+
+.banner {
+  display: block;
+  position: relative;
+  margin-bottom: 1.5rem;
+  background-color: #ccc;
+
+  &.banner-cat {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 220px;
+    background-color: #ccc;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 2.5rem;
+  }
+
+  > a {
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .banner-content {
+    display: inline-block;
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+  }
+
+  .banner-title {
+    margin-bottom: 2rem;
+    color: #010204;
+    font: 800 3rem / 1.1 $font-family;
+    letter-spacing: -.025rem;
+    text-transform: uppercase;
+  }
+
+  .banner-subtitle {
+    margin-bottom: .2rem;
+    color: #010204;
+    font: 700 1.5rem / 1.1 $font-family;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    span {
+      font-family: $second-font-family;
+      font-size: 2.4rem;
+    }
+  }
+
+  .btn {
+    min-width: 100px;
+    padding: 1.1rem 1rem;
+    border-radius: .2rem;
+  }
+}
+
+.banner-image {
+  > a {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0, .15);
+      transition: all 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+@include mq('md') {
+  .banners-group {
+    margin-bottom: 0;
+  }
+
+  .banner {
+    margin-bottom: 3rem;
+
+    .banner-content {
+      padding-left: 4rem;
+    }
+
+    &.banner-cat {
+      height: 260px;
+    }
+
+    .banner-title {
+      margin-bottom: 2.5rem;
+      font-size: 3.2rem;
+    }
+
+    .banner-subtitle {
+      font-size: 1.6rem;
+
+      span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@include mq('lg') {
+  .banner {
+    &.banner-cat {
+      height: 300px;
+    }
+
+    .banner-content {
+      padding-left: 6rem;
+      padding-top: 1rem;
+    }
+    
+    .banner-title {
+      margin-bottom: 3rem;
+      font-size: 3.6rem;
+    }
+
+    .banner-subtitle {
+      font-size: 1.8rem;
+
+      span {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+// Buttons
+.btn {
+  padding: 1.25rem 2rem;
+  font-size: $button-font-size;
+  line-height: 1.5;
+  font-family: $second-font-family;
+  letter-spacing: .075rem;
+  text-transform: uppercase;
+  border-radius: $border-radius;
+  min-width: 124px;
+  transition: all .3s;
+}
+
+.btn-sm {
+  font-size: 1.3rem;
+  padding: 1rem 1.5rem;
+  letter-spacing: 1px;
+  min-width: 90px;
+}
+
+.btn-link {
+  padding-top: 0;
+  padding-bottom: 0;
+  color: $secondary-color;
+  text-transform: initial;
+  letter-spacing: 0;
+  font-size: 13px;
+  min-width: 0;
+  font-family: $font-family;
+
+  &:hover,
+  &:focus {
+    color: $secondary-color;
+    text-decoration: underline;
+  }
+}
+
+.btn-md {
+  padding: 1rem 2.4rem;
+  font-size: 12px;
+  letter-spacing: .025em;
+  text-shadow: none;
+}
+
+.btn-primary {
+  @include button-variant(#fff, $primary-color, $primary-color);
+}
+
+.btn-secondary {
+  @include button-variant(#fff, $secondary-color, $secondary-color);
+}
+
+.btn-dark {
+  @include button-variant(#fff, #2b2b2c, #2b2b2c, #fff, #333, #333, #333, #333);
+}
+
+.btn-outline {
+  @include button-outline-variant(#ccc, $secondary-color, transparent, #ccc, $primary-color);
+}
+
+.btn-outline-secondary {
+  @include button-outline-variant(#777, #fff, $primary-color, #ccc, $primary-color);
+}
+
+.btn-outline-dark {
+  @include button-outline-variant(#05131c, #fff, $primary-color, #efefef, $primary-color);
+}
+
+.btn-social-login {
+  display: flex;
+  margin-right: 10px;
+  margin-left: 10px;
+  background-color: $primary-color;
+  font-family: Oswald;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  span, i {
+    color: #fff;
+  }
+
+  i {
+    margin-top: -1px;
+    padding-right: 6px;
+  }
+}
+
+.btn-facebook {
+  background: #3a589d;
+}
+
+.btn-gplus {
+  background: #dd4e31;
+}
+
+.btn-twitter {
+  background: #1aa9e1;
+}
+
+.owl-dots .owl-dot, .owl-nav .owl-prev, .owl-nav .owl-next {
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.mfp-container .mfp-preloader,
+.porto-loading-icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  border-top-color: $primary-color;
+  content: '';
+  z-index: 2;
+  border-image: none;
+  -webkit-animation: spin .75s infinite linear;
+  animation: spin .75s infinite linear;
+}
+
+.mfp-container .mfp-preloader::before,
+.porto-loading-icon::before {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  left: -2px;
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  border-radius: inherit;
+  border-top-color: inherit;
+  content: '';
+  -webkit-animation: spin 1.5s infinite ease;
+  animation: spin 1.5s infinite ease;
+}

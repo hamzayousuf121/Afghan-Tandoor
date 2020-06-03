@@ -1,0 +1,57 @@
+RewriteEngine on 
+
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+
+### home Page ####
+RewriteRule ^home/?$ index.php [NC]
+
+### aboutus Page ####
+RewriteRule ^aboutus/?$ aboutus.php [NC]
+
+
+### product Page ####
+RewriteRule ^product/?$ product.php [NC]
+
+
+### cart Page ####
+RewriteRule ^cart/?$ cart.php [NC]
+
+### Add to cart Page ####
+RewriteRule ^addtocart?$ addtocart.php [NC]
+
+
+### term&condition Page ####
+RewriteRule ^termcondition/?$ termcondition.php [NC]
+
+### franchising Page ####
+RewriteRule ^franchising/?$ franchising.php [NC]
+
+### privacypolicy Page ####
+RewriteRule ^privacypolicy/?$ privacypolicy.php [NC]
+
+### deliveryinformation Page ####
+RewriteRule ^deliveryinformation/?$ deliveryinformation.php [NC]
+
+### termandcondition Page ####
+RewriteRule ^termsandconditions/?$ termsandconditions.php [NC]
+
+### product detail Page ####
+RewriteRule ^productdetail/?$ product-detail.php [NC]
+
+### product detail Page ####
+RewriteRule ^deals/?$ deals.php [NC]
+
+### Product Page ####
+RewriteRule ^([^/]+)/([^/]+)?$ product.php?productname=$1&productId=$2 [NC]
+
+
+### Menu Page ####
+RewriteRule ^shop/?$ menu.php [NC]
+
+### Contact Us Page ####
+RewriteRule ^contactus/?$ contactus.php [NC]
+
+
+

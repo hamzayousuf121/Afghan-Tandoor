@@ -1,0 +1,67 @@
+#map {
+  height: 280px;
+  background-color: #ccc;
+  margin-bottom: 3rem;
+}
+
+#map address {
+  margin: 0;
+  padding: .625rem .875rem;
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+#map a {
+  display: inline-block;
+  margin-top: .8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.contact-info {
+  margin-bottom: 3rem;
+  padding-top: .5rem;
+
+  > div {
+    @include clearfix;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.contact-info  i {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+    float: left;
+    width: 4.3rem;
+    height: 4.3rem;
+    color: #fff;
+    background-color: $primary-color;
+    text-align: center;
+    font-size: 1.8rem;
+    border-radius: 0;
+}
+
+.contact-info p {
+  margin-bottom: 0;
+  margin-left: 5.5rem;
+  line-height: 1.4;
+}
+
+@include mq('md') {
+  #map {
+    height: 380px;
+  }
+}
+
+@include mq('lg') {
+  #map {
+    height: 460px;
+  }
+}

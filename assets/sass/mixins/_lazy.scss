@@ -1,0 +1,47 @@
+@mixin lazy-anim() {
+  position: relative;
+  background-color: #e6e6e6;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    left: calc(50% - 2rem);
+    top: calc(50% - 2rem);
+    border: 2px solid transparent;
+    width: 40px;
+    height: 40px;
+    border-image: none;
+    border-radius: 50%;
+    border-top-color: $primary-color;
+  }
+
+  
+  &::before {
+    -webkit-animation: spin 1s infinite ease;
+    animation: spin 1s infinite ease;
+    z-index: 4;
+  }
+
+  &::after {
+    -webkit-animation: spin .5s infinite linear;
+    animation: spin .5s infinite linear;
+    z-index: 5;
+  }
+
+  &.loaded::after,
+  &.loaded::before {
+    display: none;
+  }
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display: block;
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+    content: '';
+  }
+}

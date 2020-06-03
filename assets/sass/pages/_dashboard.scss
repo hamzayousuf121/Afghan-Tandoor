@@ -1,0 +1,32 @@
+.dashboard-content {
+  margin-bottom: 1em;
+}
+
+.dashboard-content h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.dashboard-content .form-control {
+  max-width: 100%;
+}
+
+#account-chage-pass {
+  display: none;
+  padding-bottom: 1.5rem;
+
+  &.show {
+    display: block;
+  }
+}
+
+.widget-dashboard .widget-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-top: .2rem;
+}
+
+.widget-dashboard {
+  margin-bottom: 3rem;
+}

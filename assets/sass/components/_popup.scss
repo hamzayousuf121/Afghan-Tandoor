@@ -1,0 +1,245 @@
+// Login Popup
+.login-popup {
+  .mfp-content {
+    width: 80%;
+    max-width: 872px;
+    background-color: white;
+  }
+
+  .container {
+    padding: 2.5rem 3rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2;
+    text-transform: uppercase;
+  }
+
+  form {
+    display: block;
+  }
+
+  label {
+    color: #777;
+    font-family: $font-family;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+
+  .form-footer {
+    margin: 0 0 2rem;
+
+    .custom-control {
+      margin: 0 0 0 auto;
+      font-size: 1.3rem;
+    }
+  }
+
+  .forget-password {
+    color: $primary-color;
+    font-size: 1.3rem;
+  }
+
+  .social-login-wrapper {
+    padding: 2rem 2rem 2.5rem;
+    background-color: #f4f4f2;
+    text-align: center;
+
+    p {
+      margin-bottom: 2rem;
+      color: #121214;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .btn-group {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+  }
+}
+
+// Newsletter popup
+.mfp-newsletter.mfp-bg {
+  transition: all .35s;
+  background-color: transparent;
+}
+
+.newsletter-popup {
+  position: relative;
+  max-width: 700px;
+  height: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 46px 46px 25px;
+  border-radius: 0;
+  background: #f1f1f1;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+.mfp-close-btn-in .newsletter-popup .mfp-close {
+  top: -2.5px;
+  color: $primary-color;
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: .85;
+}
+
+.newsletter-popup-content {
+  max-width: 300px;
+  text-align: center;
+
+  .form-control {
+    height: auto;
+    padding-top: 6.5px;
+    padding-bottom: 6.5px;
+    border-radius: 0;
+    font-size: 13px;
+  }
+
+  .btn {
+    min-width: 54px;
+    margin-left: -1px;
+    padding: 0;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    background-color: transparent;
+    color: #555;
+    font-family: $second-font-family;
+    font-size: 1.4rem;
+    letter-spacing: .08em;
+    line-height: 32px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+.logo-newsletter {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.newsletter-popup h2 {
+  margin: 32px 0 12px;
+  color: #313131;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.newsletter-popup p {
+  color: #444;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+
+.newsletter-popup form {
+  margin: 0 0 2.1rem;
+}
+
+.newsletter-subscribe {
+  font-size: 1.1rem;
+  text-align: left;
+
+  .checkbox {
+    margin-top: 1.5rem;
+  }
+
+  input {
+    margin-right: .5rem;
+  }
+
+  label {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+}
+
+.mfp-newsletter.mfp-removing {
+  transition: opacity .35s ease-out;
+  opacity: 0;
+}
+
+// Popup Configuration
+.mfp-ready.mfp-bg {
+  transition: all .35s ease-out;
+  background-color: #000;
+}
+
+.mfp-zoom-out-cur {
+  .mfp-bg {
+    opacity: .8;
+  }
+
+  .mfp-counter {
+    color: #fff;
+  }
+
+  .mfp-arrow-right::before {
+    border-left: 0;
+  }
+
+  .mfp-arrow-left::before {
+    border-right: 0;
+  }
+}
+
+.mfp-ajax-product.mfp-bg,
+.login-popup.mfp-bg {
+  opacity: 0;
+}
+
+// overlay animate in
+// .mfp-ajax-product.mfp-bg.mfp-ready {
+//   opacity: 0.8;
+// }
+// /* overlay animate out */
+// .mfp-ajax-product.mfp-bg.mfp-removing {
+//   opacity: 0;
+// }
+
+// content at start
+.mfp-wrap .mfp-content {
+  transition: all .35s ease-out;
+  opacity: 0;
+}
+
+.mfp-ajax-product.mfp-wrap,
+.login-popup.mfp-wrap {
+  .mfp-content {
+    max-width: 872px;
+  }
+}
+
+// content animate it
+.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+// content animate out
+.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}
+
+@include mq('md') {
+  .login-popup .col-md-6 {
+    padding: 0 2rem;
+
+    &:first-child {
+      border-right: 1px solid #f5f6f6;
+    }
+  }
+}

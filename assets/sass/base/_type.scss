@@ -1,0 +1,133 @@
+// Type
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-bottom: 1.8rem;
+  color: $headings-text;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.1;
+}
+
+h1, .h1 {
+  font-size: 3rem;
+}
+
+h2, .h2 {
+  font-size: 2.1rem;
+}
+
+h3, .h3 {
+  font-size: 1.7rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.2rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+a {
+  transition: all .3s;
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: $secondary-color;
+  text-decoration: underline;
+}
+
+.heading {
+  margin-bottom: 4rem;
+  font-size: 1.4rem;
+
+  .title {
+    margin-bottom: 1.6rem;
+  }
+
+  p {
+    letter-spacing: -.015em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-bottom: 2rem;
+  color: $headings-text;
+  font: 700 1.8rem / 1 $font-family;
+  text-transform: uppercase;
+}
+
+.carousel-title {
+  margin-bottom: 2.2rem;
+  padding: 0;
+  color: $headings-text;
+  font: 700 1.7rem / 1 $font-family;
+  letter-spacing: -.01rem;
+  text-transform: uppercase;
+}
+
+.light-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.lead {
+  color: inherit;
+  font-size: 2.1rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.fancy-text {
+  color: $primary-color;
+  font-family: $third-font-family;
+
+  p & {
+    display: inline-block;
+    font-size: 1.6em;
+    margin-bottom: -.6rem;
+    margin-top: -1.5rem;
+    position: relative;
+    top: .3rem;
+  }
+}
+
+@include mq('md') {
+  h1, .h1 {
+    font-size: 3.2rem;
+  }
+
+  h2, .h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@include mq('lg') {
+  h1, .h1 {
+    font-size: 3.6rem;
+  }
+}

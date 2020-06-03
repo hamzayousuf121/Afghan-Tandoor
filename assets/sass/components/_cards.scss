@@ -1,0 +1,45 @@
+.card {
+  margin-bottom: 3rem;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  font-size: $font-size;
+}
+
+.card-header {
+  @include clearfix;
+  margin: 0;
+  padding: 1.2rem 1.5rem;
+  border-radius: 0;
+  border-color: #ddd;
+  background-color: #f5f5f5;
+  color: $headings-text;
+  font-weight: 700;
+  line-height: 1.5;
+  text-transform: uppercase;
+
+  .card-edit {
+    display: inline-block;
+    margin-top: .1rem;
+    float: right;
+    color: $secondary-color;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+}
+
+.card-body {
+  min-height: 135px;
+  padding: 2rem 1.5rem;
+  border-top: 0;
+  border-radius: 0;
+
+  a {
+    text-decoration: underline;
+  }
+
+  h4 {
+    margin-bottom: .7rem;
+    color: $light-text;
+  }
+}

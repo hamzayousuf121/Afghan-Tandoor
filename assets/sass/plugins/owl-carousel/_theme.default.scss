@@ -1,0 +1,36 @@
+/*
+ * 	Default theme - Owl Carousel CSS File
+ */
+
+$color-base:			#2b2b2d !default;
+$color-white:			#FFF !default;
+$color-gray:			#dfdfdf !default;
+
+//nav
+
+$nav-color: 			$color-base !default;
+$nav-color-hover:		$primary-color !default;
+$nav-font-size: 		2rem !default;
+$nav-rounded: 			0 !default;
+$nav-margin: 			0 !default;
+$nav-padding: 			4px 7px !default;
+$nav-background: 		transparent !default;
+$nav-background-hover:	transparent !default;
+$nav-disabled-opacity: 	0.5 !default;
+
+//dots
+
+$dot-width:					1.1rem !default;
+$dot-height:				.3rem !default;
+$dot-rounded:				0 !default;
+$dot-margin: 				0 5px !default;
+$dot-border:				transparent !default;
+$dot-border-light:			transparent !default;
+$dot-border-active:			transparent !default;
+$dot-border-light-active: 	transparent !default;
+$dot-background:			#e4e4e4 !default;
+$dot-background-active:		#2b2b2c !default;
+$dot-background-light:		#fff !default;
+$dot-background-light-active: #2b2b2c !default;
+
+@import 'theme';

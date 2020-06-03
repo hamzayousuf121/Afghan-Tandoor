@@ -1,0 +1,65 @@
+@charset 'UTF-8';
+
+/* Main Css File */
+@import 'mixins/clearfix';
+@import 'mixins/breakpoints';
+@import 'mixins/lazy';
+@import 'mixins/buttons';
+
+@import 'config/fonts';
+@import 'config/variables';
+
+@import 'base/base';
+@import 'base/type';
+@import 'base/layout';
+@import 'base/header/header';
+@import 'base/header/menu';
+@import 'base/header/mobile-menu';
+@import 'base/header/sticky-header';
+//@import 'base/newsletter';
+@import 'base/footer';
+
+@import 'components/product';
+@import 'components/banners';
+@import 'components/breadcrumb';
+@import 'components/page-header';
+@import 'components/font-icons';
+@import 'components/forms';
+@import 'components/buttons';
+@import 'components/alerts';
+@import 'components/cards';
+@import 'components/modals';
+@import 'components/member';
+@import 'components/tooltips';
+@import 'components/social-icons';
+@import 'components/info-boxes';
+@import 'components/feature-boxes';
+@import 'components/tabs';
+@import 'components/counters';
+@import 'components/testimonials';
+@import 'components/pagination';
+@import 'components/popup';
+
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/category';
+@import 'pages/product-pages/product-page';
+@import 'pages/product-pages/product-page-extended';
+@import 'pages/product-pages/product-page-sidebar';
+@import 'pages/product-pages/product-page-grid';
+@import 'pages/cart';
+@import 'pages/checkout';
+@import 'pages/blog';
+@import 'pages/contact';
+@import 'pages/dashboard';
+
+/* Plugins */
+@import 'plugins/owl-carousel/owl.carousel';
+@import 'plugins/owl-carousel/owl.theme.default';
+@import 'plugins/magnific-popup/main';
+@import 'plugins/jquery.bootstrap-touchspin';
+@import 'plugins/nouislider';
+
+/* Spacing + Helpers */
+@import 'config/helpers';
+@import 'config/spacing';

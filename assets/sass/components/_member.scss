@@ -1,0 +1,34 @@
+// Member
+.member {
+  margin-bottom: 2.8rem;
+  padding: 2.5rem 0;
+  transition: all .3s ease;
+  background-color: #fff;
+  text-align: center
+
+  img {
+    display: inline-block !important;
+    max-width: 160px !important;
+    height: auto;
+    border-radius: 50%;
+  }
+
+  .owl-carousel & {
+    margin-bottom: .5rem;
+  }
+}
+
+.member-title {
+  margin: 2.5rem 0 .5rem;
+  color: #282d3b;
+  font: 700 1.4rem / 1 $font-family;
+  text-transform: uppercase;
+}
+
+.member-job {
+  display: block;
+  margin-bottom: 1rem;
+  color: #8c8e94;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
